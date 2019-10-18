@@ -7,10 +7,11 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order( 4 )
-public class MyDemoLoggingAspect {
+@Order( 7 )
+public class MyApiAnalyticsAspect {
+
     @Before( "ee.praktika.aopdemo.aspect.AopExpressions.referencePointcutIgnoreGetSet()" )
-    public void beforeAddAccountAdvice(){
-        System.out.println( "\n======>>> Executing @Before advice on addAccount() in the DAO package" );
+    public void performApiAnalytics(){
+        System.out.println( "\n======>>> Doing some cool analytics down here." );
     }
 }
